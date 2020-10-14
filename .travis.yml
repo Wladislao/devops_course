@@ -13,10 +13,9 @@ cache:
 install:
   - npm install -g yarn
 
-script:
+before_script:
   # - yarn lint
   - yarn build
-  - mv build/index.html build/404.html
 
 deploy:
   provider: pages

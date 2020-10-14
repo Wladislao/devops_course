@@ -1,6 +1,21 @@
 language: node_js
 node_js:
   - "stable"
+
+branches:
+  only:
+  - master
+
+cache:
+  directories:
+    - node_modules
+
+install:
+  - npm install
+
+script:
+#  - yarn lint
+  - yarn build
 deploy:
   provider: pages
   skip_cleanup: true

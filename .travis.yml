@@ -4,19 +4,18 @@ node_js:
 
 branches:
   only:
-    - master
+  - master
 
 cache:
   directories:
     - node_modules
 
 install:
-  - npm install -g yarn
+  - npm install
 
-before_script:
-  # - yarn lint
+script:
+#  - yarn lint
   - yarn build
-
 deploy:
   provider: pages
   skip_cleanup: true
